@@ -1,8 +1,8 @@
+#AFFICHER LA LISTE DE TOUS LES PRODUITS
 import scrapy
 import ast
 
 
-#pour lancer le script, dans le terminal écrit:  scrapy runspider list_of_product.py
 # la commande par défault: scrapy runspider le_nom_de_ton_script.py
 
 class ListOfProduct(scrapy.Spider):

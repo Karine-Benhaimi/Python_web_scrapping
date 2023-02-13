@@ -1,3 +1,4 @@
+#AFFICHER LA LISTE DE TOUS LES CLIENTS
 import scrapy
 import ast
 
@@ -7,7 +8,7 @@ import ast
 #pour lancer le script, dans le terminal écrit:  scrapy runspider list_of_clients.py
 # la commande par défault: scrapy runspider le_nom_de_ton_script.py
 
-class ListOfProduct(scrapy.Spider):
+class ListOfClient(scrapy.Spider):
 
     #nom du spider
     name = "Listspider"
