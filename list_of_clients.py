@@ -3,6 +3,7 @@ import scrapy
 import ast
 
 
+
 #ouvrir anaconda terminal ensuite tapper conda activate test0 pour se mettre dans notre environnement ou scrapy est installé
 #se mettre dans le dossier Scrapper, utiliser la commande dir au lieu de ls
 #pour lancer le script, dans le terminal écrit:  scrapy runspider list_of_clients.py
@@ -19,10 +20,10 @@ class ListOfClient(scrapy.Spider):
     def parse(self, response):
 
         #on récupère toutes les données qui sont dans la balise body sous forme d'un string
-        lis_of_clients_with_tags = response.css('body')
+        list_of_clients_with_tags = response.css('body')
 
         #on remplace les balise par une chaine vide '' pour avoir des données bien nettoyées
-        list_of_clients_str = lis_of_clients_with_tags.get().replace('</p></body>', '').replace('<body><p>', '')
+        list_of_clients_str = list_of_clients_with_tags.get().replace('</p></body>', '').replace('<body><p>', '')
 
         #on transforme la liste qui contient des dictionnaires sous forme de string en un objet python de list de dictionnaires
         list_of_clients = ast.literal_eval(list_of_clients_str)
